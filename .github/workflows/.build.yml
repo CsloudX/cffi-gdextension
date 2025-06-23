@@ -48,6 +48,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install scons ${{ join(matrix.packages, ' ') }}
+          sudo apt install libltdl7-dev
       - name: Cache SCons files
         uses: actions/cache@v4
         with:
